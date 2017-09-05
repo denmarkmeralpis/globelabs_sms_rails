@@ -3,7 +3,7 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'globelabs_sms_rails'
+gem 'globelabs_sms_rails', '0.0.3'
 ```
 
 And then execute:
