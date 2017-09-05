@@ -25,12 +25,10 @@ module GlobelabsSmsRails
 		end
 	end
 
-	def self.compose(msg)
-		@message = msg
-	end
-
-	def self.send_to(address)
+	def self.send_message(address, message)
 		@address = address
+		@message = message
+		
 		if @address.nil? || @message.nil?
 			raise 'Address or message is nil'
 		else

@@ -21,8 +21,7 @@ After install the gem, generate an initializer and configure it
 
 ## Usage
 ```ruby
-sms = GlobelabsSmsRails.compose("Your message")
-sms.send_to("63917XXXXXXX")
+response = GlobelabsSmsRails.send_message("63917XXXXXXX", "Your message")
 ```
 
 ## License

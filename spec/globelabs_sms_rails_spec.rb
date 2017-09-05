@@ -15,8 +15,7 @@ describe GlobelabsSmsRails do
 		let(:message) { 'Hello world!' }
 		let(:address) { '639778198061' }
 		let(:output) { 
-			subject.compose(message)
-			subject.send_to(address)
+			subject.send_message(address, message)
 		}
 
 		it 'should return TRUE' do
