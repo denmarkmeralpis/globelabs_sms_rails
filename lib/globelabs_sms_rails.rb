@@ -1,3 +1,6 @@
+require "uri"
+require "net/https"
+require "json"
 require "globelabs_sms_rails/version"
 
 module GlobelabsSmsRails
@@ -25,23 +28,36 @@ module GlobelabsSmsRails
 		end
 	end
 
-	def self.send_message(address, message)
+	def self.send_message(address, message, customCred=nil)
 		@address = address
 		@message = message
 		
 		if @address.nil? || @message.nil?
 			raise 'Address or message is nil'
 		else
+			unless customCred.nil?
+				appId = customCred[:app_id]
+				appSecret = customCred[:app_secret]
+				passPhrase = customCred[:passphrase]
+				shortCode = customCred[:short_code]
+			else	
+				appId = self.configuration.app_id
+				appSecret = self.configuration.app_secret
+				passPhrase = self.configuration.passphrase 
+				shortCode = self.configuration.short_code
+			end
+
 			data = {
 				address: @address,
 				message: @message,
-				app_id: self.configuration.app_id,
-				app_secret: self.configuration.app_secret,
-				passphrase: self.configuration.passphrase
+				app_id: appId,
+				app_secret: appSecret,
+				passphrase: passPhrase
 			}
-			uri = URI.parse("https://devapi.globelabs.com.ph/smsmessaging/#{self.configuration.api_version}/outbound/#{self.configuration.short_code}/requests")
+
+			uri = URI.parse("https://devapi.globelabs.com.ph/smsmessaging/#{self.configuration.api_version}/outbound/#{shortCode}/requests")
 			res = Net::HTTP.post_form(uri, data)
-			puts "#{data}"
+
 			return JSON.parse(res.body).merge(http_code: res.code)
 		end
 	end

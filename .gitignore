@@ -6,4 +6,5 @@
 /doc/
 /pkg/
 /spec/reports/
+/spec/globelabs_sms_rails_spec.rb.template
 /tmp/
