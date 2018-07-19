@@ -1,0 +1,20 @@
+{
+	"outboundSMSMessageRequest": {
+		"address": "09177710296",
+		"deliveryInfoList": {
+			"deliveryInfo": [],
+			"resourceURL": "https://devapi.globelabs.com.ph/smsmessaging/v1/outbound/9440/requests"
+		},
+		"senderAddress": "9440",
+		"outboundSMSTextMessage": {
+			"message": "This is a sample SMS message! Hola!"
+		},
+		"receiptRequest": {
+			"notifyURL": "",
+			"callbackData": "",
+			"senderName": null
+		},
+		"resourceURL": "https://devapi.globelabs.com.ph/smsmessaging/v1/outbound/9440/requests",
+		"numberOfMessagesInThisBatch": 1
+	}
+}
