@@ -1,10 +1,13 @@
 /.bundle/
 /.yardoc
-/Gemfile.lock
 /_yardoc/
 /coverage/
 /doc/
 /pkg/
 /spec/reports/
-/spec/globelabs_sms_rails_spec.rb.template
 /tmp/
+/spec/tmp/
+
+# rspec failure tracking
+.rspec_status
+.env
