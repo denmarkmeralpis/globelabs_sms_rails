@@ -1,5 +1,10 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-# Specify your gem's dependencies in globelabs_sms_rails.gemspec
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+# Specify your gem's dependencies in globe_labs_sms.gemspec
 gemspec
-gem 'rake'
+
+group :test do
+  gem "generator_spec"
+end
