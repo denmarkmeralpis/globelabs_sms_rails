@@ -30,11 +30,11 @@ then edit the file in `config/initializer/globelabs_sms_rails.rb` and supply the
 
 Two way of sending SMS:
 ```ruby
-# Direct sending through class method `#send`
-GlobelabsSmsRails.send(address: '0917XXXXXXX', message: 'Your message here!')
+# Direct sending through class method #send
+GlobelabsSmsRails::Client.send(address: '0917XXXXXXX', message: 'Your message here!')
     
 # Initialize and send
-client = GlobelabsSmsRails.new(address: '0917XXXXXXX', message: 'Your message here!)
+client = GlobelabsSmsRails::Client.new(address: '0917XXXXXXX', message: 'Your message here!)
 ciient.send
 ```
 
