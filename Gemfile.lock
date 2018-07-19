@@ -161,15 +161,15 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
-  dotenv (~> 2.5.0)
+  dotenv (~> 2.5)
   generator_spec
   globelabs_sms_rails!
-  rails
+  rails (~> 5.2)
   rake (~> 10.0)
   rspec (~> 3.0)
   simplecov
   simplecov-console
-  webmock (~> 3.4.2)
+  webmock (~> 3.4)
 
 BUNDLED WITH
    1.16.1
