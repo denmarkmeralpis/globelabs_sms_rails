@@ -1,6 +1,6 @@
-[![Test Coverage](https://api.codeclimate.com/v1/badges/8f4e8e1c883e6865d2ed/test_coverage)](https://codeclimate.com/github/denmarkmeralpis/globelabs_sms_rails/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/8f4e8e1c883e6865d2ed/maintainability)](https://codeclimate.com/github/denmarkmeralpis/globelabs_sms_rails/maintainability)
+[![Build Status](https://travis-ci.org/denmarkmeralpis/globelabs_sms_rails.svg?branch=master)](https://travis-ci.org/denmarkmeralpis/globelabs_sms_rails) [![Test Coverage](https://api.codeclimate.com/v1/badges/8f4e8e1c883e6865d2ed/test_coverage)](https://codeclimate.com/github/denmarkmeralpis/globelabs_sms_rails/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/8f4e8e1c883e6865d2ed/maintainability)](https://codeclimate.com/github/denmarkmeralpis/globelabs_sms_rails/maintainability)
 
-# GlobeabsSmsRails
+# Globe Labs SMS on Rails
 
 This gem will help you send SMS using Globe Labs API. Please take note that this gem will work if the subscriber consent workflow is disabled. You can apply the process by asking Globe
 
