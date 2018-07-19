@@ -6,5 +6,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gemspec
 
 group :test do
-  gem "generator_spec"
+  gem 'generator_spec'
+  gem 'simplecov'
+  gem 'simplecov-console'
 end

@@ -1,5 +1,10 @@
 require 'bundler/setup'
 require 'globelabs_sms_rails'
+require 'simplecov'
+require 'simplecov-console'
+
+SimpleCov.formatter = SimpleCov.formatter = SimpleCov::Formatter::Console
+SimpleCov.start
 
 RSpec.configure do |config|
   config.example_status_persistence_file_path = ".rspec_status"
@@ -18,3 +23,4 @@ RSpec.configure do |config|
     end
   end
 end
+
