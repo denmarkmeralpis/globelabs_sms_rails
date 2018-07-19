@@ -1,7 +1,6 @@
-require 'rspec/core/rake_task'
 require "bundler/gem_tasks"
+require "rspec/core/rake_task"
 
-task :default => :spec
 RSpec::Core::RakeTask.new(:spec)
 
-Dir.glob('tasks/**/*.rake').each(&method(:import))
+task :default => :spec
