@@ -22,7 +22,7 @@ Or install it yourself as:
     
 Generate initializer to config/initializer via:
 
-    $ rails g globelabs_sms_rails:install
+    $ rails g globelabs_sms_rails:install initializer
     
 then edit the file in `config/initializer/globelabs_sms_rails.rb` and supply the necessary details.
 
