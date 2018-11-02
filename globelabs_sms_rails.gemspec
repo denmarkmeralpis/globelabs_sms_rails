@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = GlobelabsSmsRails::VERSION
   spec.authors       = ["Nujian Den Mark Meralpis"]
   spec.email         = ["meralpisdenmark@gmail.com"]
-  
+
   spec.summary       = "A simple gem for sending SMS through Globe Labs API."
   spec.homepage      = "https://rubygems.org/gems/globelabs_sms_rails"
   spec.description   = "This gem will help you send SMS using Globe Labs API. Please take note that this gem will work if the subscriber consent workflow is disabled. You can apply the process by asking Globe"
@@ -35,5 +35,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "dotenv", "~> 2.5"
   spec.add_development_dependency "webmock", "~> 3.4"
-  spec.add_development_dependency "rails", "~> 5.2"
 end
