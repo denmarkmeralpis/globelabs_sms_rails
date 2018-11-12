@@ -19,11 +19,11 @@ And then execute:
 Or install it yourself as:
 
     $ gem install globelabs_sms_rails
-    
+
 Generate initializer to config/initializer via:
 
     $ rails g globelabs_sms_rails:install initializer
-    
+
 then edit the file in `config/initializer/globelabs_sms_rails.rb` and supply the necessary details.
 
 ## Usage
@@ -32,10 +32,10 @@ Two way of sending SMS:
 ```ruby
 # Direct sending through class method #send
 GlobelabsSmsRails::Client.send(address: '0917XXXXXXX', message: 'Your message here!')
-    
+
 # Initialize and send
-client = GlobelabsSmsRails::Client.new(address: '0917XXXXXXX', message: 'Your message here!)
-ciient.send
+client = GlobelabsSmsRails::Client.new
+ciient.send(address: '0917XXXXXXX', message: 'Your message here!)
 ```
 
 # License

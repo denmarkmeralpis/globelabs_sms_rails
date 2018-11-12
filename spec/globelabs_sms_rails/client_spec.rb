@@ -7,7 +7,8 @@ Dotenv.load
 RSpec.describe GlobelabsSmsRails::Client do
    let(:address) { '09177710296' }
    let(:message) { 'This is a sample SMS message! Hola!' }
-   let(:client) { GlobelabsSmsRails::Client.new(address: address, message: message) }
+   let(:client) { GlobelabsSmsRails::Client.new }
+   let(:data) { { address: address, message: message } }
 
    before do
 		GlobelabsSmsRails.configure do |config|
@@ -21,11 +22,11 @@ RSpec.describe GlobelabsSmsRails::Client do
    context 'when sending a message' do
       it 'should return a 200 http_code status' do
          stub_request(:post, 'https://devapi.globelabs.com.ph/smsmessaging/v1/outbound/9440/requests').to_return(body: json_response('200.json'), status: 200, headers: {})
-         response = client.send
-         
+         response = client.send(data)
+
          expect(response).to have_key(:http_code)
          expect(response[:http_code]).to eq('200')
-      end      
+      end
    end
 
    context 'direct sending of message without instantiating' do
